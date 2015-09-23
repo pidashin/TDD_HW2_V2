@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>dccccb49-2af8-4b32-ba3f-b1ff57eaf36c</ProjectGuid>
+    <ProjectGuid>{F4B25C2F-3BD5-4237-B6F1-4F6E0B500AA8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PotterShoppingCart.TestsTests</RootNamespace>
@@ -50,8 +50,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="HarryPotterCartTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PotterShoppingCart.Tests\PotterShoppingCart.Tests.csproj">
+      <Project>{DE4ABE74-E62D-42A2-A753-08A8C35A36F4}</Project>
+      <Name>PotterShoppingCart.Tests</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
