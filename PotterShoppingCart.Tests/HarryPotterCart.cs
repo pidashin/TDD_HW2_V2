@@ -7,9 +7,13 @@ namespace PotterShoppingCart.Tests
 {
     public class HarryPotterCart
     {
-        public int CountPrice(List<Book> books)
+        public double CountPrice(List<Book> books)
         {
-            return books.Sum(item => item.price);
+            double discount = 1;
+            if (books.Count >= 2)
+                discount = 0.95;
+
+            return books.Sum(item => item.price * discount);
         }
     }
 }
