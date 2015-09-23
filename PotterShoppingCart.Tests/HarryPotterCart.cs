@@ -9,7 +9,7 @@ namespace PotterShoppingCart.Tests
     {
         public int CountPrice(List<Book> books)
         {
-            return 0;
+            return books.Sum(item => item.price);
         }
     }
 }
