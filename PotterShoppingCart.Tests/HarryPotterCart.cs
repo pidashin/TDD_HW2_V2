@@ -9,10 +9,8 @@ namespace PotterShoppingCart.Tests
     {
         public double CountPrice(List<Book> books)
         {
-            double discount = 1;
-            if (books.Count >= 2)
-                discount = 0.95;
-
+            var discounts = new List<double> { 1, 1, 0.95, 0.9 };
+            var discount = discounts[books.Count()];
             return books.Sum(item => item.price * discount);
         }
     }
